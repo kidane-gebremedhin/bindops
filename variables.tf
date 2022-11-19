@@ -16,6 +16,9 @@ variable "subnet_cidr" {
     be2 = "10.0.1.0/24"
     fe1 = "10.0.2.0/24"
     fe2 = "10.0.3.0/24"
+    kg1 = "10.0.3.0/24"
+    kg2 = "10.0.3.0/24"
+    kg3 = "10.0.3.0/24"
   }
 }
 
@@ -29,5 +32,11 @@ variable "Enable_dns_support" {
   type        = bool
   description = "Set true or false if you want dns support"
   default     = false
+}
+
+variable "aws_instance" {
+  type = string
+  description = "The allowed block size is between a /28 netmask and /16 netmask"
+  default = "kg-instance"
 }
 
